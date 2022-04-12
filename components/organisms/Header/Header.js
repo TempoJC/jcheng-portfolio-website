@@ -10,7 +10,6 @@ import { MobileMenu } from '@/Molecules/MobileMenu/';
 export const navItems = [
   { hash: 'about', title: 'About' },
   { hash: 'skills', title: 'Skills' },
-  { hash: 'experience', title: 'Experience' },
   { hash: 'projects', title: 'Projects' },
   { hash: 'contact', title: 'Contact' }
 ];
