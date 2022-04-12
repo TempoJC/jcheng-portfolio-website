@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "paths": {
+      // Components
+      "@/Atoms/*": ["./components/atoms/*"],
+      "@/Molecules/*": ["./components/molecules/*"],
+      "@/Organisms/*": ["./components/organisms/*"],
+      "@/Species/*": ["./components/species/*"],
+      "@/Templates/*": ["./components/templates/*"],
+      // Other folders
+      "@/pages/*": ["./pages*"],
+      "@/public/*": ["./public/*"],
+      "@/utils/*": ["./utils/*"]
+    },
+    "incremental": true
+  },
+  "include": ["**/*.js"],
+  "exclude": ["node_modules"]
+}
