@@ -43,7 +43,7 @@ const Hero = () => (
     <p>
       P.S. this website is open-source and available on{' '}
       <a
-        href="https://github.com/TempoJC"
+        href="https://github.com/TempoJC/jcheng-portfolio-website"
         title="Link to Github repository"
         target="_blank"
         rel="noopener noreferrer"
