@@ -1,15 +1,23 @@
-# Jose Palacios Portfolio
+# Personal Portfolio website
 
-This is my portfolio website, proudly built with [Next.js](https://nextjs.org/), [React]https://es.reactjs.org/), [Framer motion]https://www.framer.com/motion/), [Tailwind](https://tailwindcss.com/).
+This is my portfolio website, proudly built with [Next.js](https://nextjs.org/), [React](https://es.reactjs.org/), [Tailwind](https://tailwindcss.com/).
 
-This project is a constant work in progress, so if you find any bugs, typos or other errors, please feel free to open an issue or pull request. This project is open source, so please feel free to fork and adapt for your own projects (credit would be appreciated).
+Hope you like it. Tweak it and use it !!
+
+## Tech Stack
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![NextJS](https://img.shields.io/badge/Nextjs-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/FramerMotion-black?style=for-the-badge&logo=framer%20Motion&logoColor=blue)
+![fortawesome](https://img.shields.io/badge/fortawesome-111111?style=for-the-badge&logo=simple-icons&logoColor=white)
 
 ## Getting Started
 
 1. Fork this repository and clone it into the current directory
 
    ```bash
-   git clone https://github.com/TempoJC
+   git clone https://github.com/TempoJC/jcheng-portfolio-website
    ```
 
 2. Install dependencies
