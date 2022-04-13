@@ -5,7 +5,12 @@
     #20e3b2 49%,
     #29ffc6 97.19%
   );
-  --dark-gradient: linear-gradient(95.08deg, #f46b45 2.49%, #eea849 97.19%);
+  --dark-gradient: linear-gradient(
+    95.08deg,
+    #f05c00 2.49%,
+    #ea18eb 49%,
+    #5618eb 97.19%
+  );
 }
 
 /* purgecss start ignore */
@@ -43,17 +48,21 @@
   background: #945bf170;
 }
 
-html.dark .headroom--pinned header {
-  border-bottom: 1px solid rgba(78, 75, 102, 0.78);
+html.dark header {
+  background-color: #000000;
 }
 
-html.light .headroom--pinned header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+html.light header {
+  background-color: #ffffff;
+}
+
+html.dark {
+  background-color: #000000;
 }
 
 @layer components {
   .headline {
-    @apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-subu-start via-subu-middle to-subu-stop dark:from-mastercard-start dark:to-mastercard-stop;
+    @apply font-bold text-transparent bg-clip-text bg-gradient-to-r from-light-start via-light-middle to-light-stop dark:from-dark-start dark:via-dark-middle dark:to-dark-stop;
   }
 
   .underlined::after {

@@ -7,11 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'subu-start': '#0cebeb',
-        'subu-middle': '#20e3b2',
-        'subu-stop': '#29ffc6',
-        'mastercard-start': '#f46b45',
-        'mastercard-stop': '#eea849',
+        'light-start': '#0cebeb',
+        'light-middle': '#20e3b2',
+        'light-stop': '#29ffc6',
+        'dark-start': '#f05c00',
+        'dark-middle': '#ea18eb',
+        'dark-stop': '#5618eb',
         'off-black': '#14142B',
         'off-white': '#FCFCFC',
         grey: {
