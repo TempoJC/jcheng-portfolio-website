@@ -4,7 +4,7 @@ import { NavigationItem } from '@/Atoms/NavigationItem';
 import { navItems } from '@/Organisms/Header';
 import { ThemeToggle } from '@/Atoms/ThemeToggle';
 
-const MobileMenu = ({ isOpen }) => {
+const MobileMenu = ({ activeHash, isOpen }) => {
   const navigationVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: custom => ({
@@ -25,14 +25,13 @@ const MobileMenu = ({ isOpen }) => {
           transition={{ duration: 0, delay: 0 }}
         >
           <ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
-            {navItems.map(({ href, hash, title }, index) => (
+            {navItems.map(({ hash, title }, index) => (
               <NavigationItem
                 animate="visible"
                 customDelay={0.5 + (index + 1) * 0.1}
-                hash={hash}
-                href={href}
                 initial="hidden"
-                key={`${href}${hash}${index}`}
+                isActive={activeHash === `/#${hash}`}
+                key={`${hash}${index}`}
                 title={title}
                 variants={navigationVariants}
               />
@@ -54,6 +53,7 @@ const MobileMenu = ({ isOpen }) => {
 };
 
 MobileMenu.propTypes = {
+  activeHash: PropTypes.string.isRequired,
   isOpen: PropTypes.bool
 };
 

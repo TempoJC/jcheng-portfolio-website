@@ -2,13 +2,13 @@ import { Container } from '@/Atoms/Container';
 import Image from 'next/image';
 import me from '@/public/me.jpeg';
 
-const About = props => {
+const About = ({ refNode }) => {
   const age = Math.floor(
     (new Date() - new Date('1988-11-22').getTime()) / 3.15576e10
   );
 
   return (
-    <Container>
+    <Container ref={refNode} id={'about'}>
       <div className="flex flex-row">
         <div className="w-1/3 m-auto">
           <Image

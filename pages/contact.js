@@ -2,8 +2,8 @@ import { Container } from '@/Atoms/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SOCIAL_NETWORKS } from '../constants';
 
-const Contact = () => (
-  <Container>
+const Contact = ({ refNode }) => (
+  <Container ref={refNode} id={'contact'}>
     <h1 className="headline text-3xl md:text-5xl lg:text-6xl text-center">
       Connect with Me
     </h1>
