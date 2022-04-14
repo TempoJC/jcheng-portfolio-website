@@ -2,9 +2,9 @@ import { Container } from '@/Atoms/Container';
 import atresplayer from '../public/images/atresplayer_background.jpeg';
 import Image from 'next/image';
 
-const Projects = () => {
+const Projects = ({ refNode }) => {
   return (
-    <Container>
+    <Container ref={refNode} id={'projects'}>
       <div className="flex flex-row">
         <div className="flex">
           <div className="w-2/3">

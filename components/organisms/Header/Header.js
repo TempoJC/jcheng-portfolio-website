@@ -8,16 +8,16 @@ import { BurgerIcon } from '@/Atoms/BurgerIcon';
 import { MobileMenu } from '@/Molecules/MobileMenu/';
 
 export const navItems = [
-  { href: '/', hash: 'personal', title: 'Personal' },
-  { href: '/', hash: 'skills', title: 'Skills' },
-  { href: '/', hash: 'experience', title: 'Experience' },
-  { href: '/', hash: 'projects', title: 'Projects' },
-  { href: '/', hash: 'contact', title: 'Contact' }
+  { hash: 'about', title: 'About' },
+  { hash: 'skills', title: 'Skills' },
+  { hash: 'projects', title: 'Projects' },
+  { hash: 'contact', title: 'Contact' }
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { pathname } = useRouter();
+  const [activeHash, setActiveHash] = useState('/');
+  const router = useRouter();
 
   useEffect(() => {
     if (isOpen) {
@@ -31,7 +31,21 @@ const Header = () => {
 
   useEffect(() => {
     setIsOpen(false);
-  }, [pathname]);
+  }, [router.pathname]);
+
+  const handleHashChange = (url, { shallow }) => {
+    setActiveHash(url);
+  };
+
+  useEffect(() => {
+    router.events.on('hashChangeStart', handleHashChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('hashChangeStart', handleHashChange);
+    };
+  }, []);
 
   const navigationVariants = {
     hidden: { opacity: 0, y: -10 },
@@ -55,7 +69,7 @@ const Header = () => {
               <span className="transition duration-300 opacity-100 group-hover:opacity-0">
                 @TempoJC
               </span>
-              <span className="absolute transition duration-300 left-0 opacity-0 group-hover:opacity-100 text-transparent bg-clip-text hover:bg-gradient-to-r from-subu-start to-subu-stop dark:from-mastercard-start dark:to-mastercard-stop">
+              <span className="absolute transition duration-300 left-0 opacity-0 group-hover:opacity-100 text-transparent bg-clip-text hover:bg-gradient-to-r from-light-start to-light-stop dark:from-dark-start dark:to-dark-stop">
                 Jose Camargo
               </span>
             </motion.a>
@@ -63,14 +77,14 @@ const Header = () => {
 
           <nav className="hidden md:block">
             <ul className="flex gap-8 text-lg">
-              {navItems.map(({ href, hash, title }, index) => (
+              {navItems.map(({ hash, title }, index) => (
                 <NavigationItem
                   animate="visible"
                   customDelay={(index + 1) * 0.1}
                   hash={hash}
-                  href={href}
                   initial="hidden"
-                  key={`${href}${hash}${index}`}
+                  isActive={activeHash === `/#${hash}`}
+                  key={`${hash}${index}`}
                   title={title}
                   variants={navigationVariants}
                 />
@@ -91,7 +105,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <MobileMenu isOpen={isOpen} />
+      <MobileMenu isOpen={isOpen} activeHash={activeHash} />
     </>
   );
 };
