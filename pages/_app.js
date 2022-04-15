@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import { Layout } from '@/Templates/Layout';
 import { ThemeProvider } from 'next-themes';
-import { useEffect } from 'react';
 import '../styles/index.css';
 
 function MyApp({ Component, pageProps }) {

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Container } from '@/Atoms/Container';
 import atresplayer from '../public/images/atresplayer_background.jpeg';
 import Image from 'next/image';
@@ -34,6 +35,13 @@ const Projects = ({ refNode }) => {
       </div>
     </Container>
   );
+};
+
+Projects.propTypes = {
+  refNode: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]).isRequired
 };
 
 export default Projects;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Container } from '@/Atoms/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SOCIAL_NETWORKS } from '../constants';
@@ -35,5 +36,12 @@ const Contact = ({ refNode }) => (
     </div>
   </Container>
 );
+
+Contact.propTypes = {
+  refNode: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]).isRequired
+};
 
 export default Contact;
