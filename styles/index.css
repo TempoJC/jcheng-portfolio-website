@@ -1,18 +1,3 @@
-:root {
-  --light-gradient: linear-gradient(
-    95.08deg,
-    #0cebeb 2.49%,
-    #20e3b2 49%,
-    #29ffc6 97.19%
-  );
-  --dark-gradient: linear-gradient(
-    95.08deg,
-    #f05c00 2.49%,
-    #ea18eb 49%,
-    #5618eb 97.19%
-  );
-}
-
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
@@ -44,6 +29,10 @@
   font-style: italic;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background: #945bf170;
 }
@@ -56,8 +45,30 @@ html.light header {
   background-color: #ffffff;
 }
 
+html.light {
+  --light-gradient: linear-gradient(
+    95.08deg,
+    #0cebeb 2.49%,
+    #20e3b2 49%,
+    #29ffc6 97.19%
+  );
+}
+
 html.dark {
   background-color: #000000;
+  --light-gradient: linear-gradient(
+    95.08deg,
+    #f05c00 2.49%,
+    #ea18eb 49%,
+    #5618eb 97.19%
+  );
+
+  --dark-gradient: linear-gradient(
+    95.08deg,
+    #f05c00 2.49%,
+    #ea18eb 49%,
+    #5618eb 97.19%
+  );
 }
 
 @layer components {
