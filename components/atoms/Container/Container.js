@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 
 const Container = forwardRef((props, ref) =>
   ref ? (
@@ -15,5 +16,17 @@ const Container = forwardRef((props, ref) =>
     </div>
   )
 );
+
+Container.propTypes = {
+  id: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
+
+Container.defaultProps = {
+  id: ''
+};
 
 export { Container };

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import brain from '../public/brain.png';
@@ -57,6 +58,13 @@ const Skills = ({ refNode }) => {
       </div>
     </Container>
   );
+};
+
+Skills.propTypes = {
+  refNode: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]).isRequired
 };
 
 export default Skills;

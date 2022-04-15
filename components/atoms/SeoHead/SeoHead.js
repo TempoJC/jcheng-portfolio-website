@@ -26,4 +26,6 @@ SeoHead.propTypes = {
   author: PropTypes.string
 };
 
+SeoHead.defaultProps = {};
+
 export { SeoHead };

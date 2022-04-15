@@ -57,4 +57,8 @@ MobileMenu.propTypes = {
   isOpen: PropTypes.bool
 };
 
+MobileMenu.defaultProps = {
+  isOpen: false
+};
+
 export { MobileMenu };

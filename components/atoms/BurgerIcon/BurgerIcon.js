@@ -13,4 +13,8 @@ BurgerIcon.propTypes = {
   isOpen: PropTypes.bool
 };
 
+BurgerIcon.defaultProps = {
+  isOpen: false
+};
+
 export { BurgerIcon };

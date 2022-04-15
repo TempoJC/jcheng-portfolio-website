@@ -11,7 +11,6 @@ const NavigationItem = ({
   title,
   variants
 }) => {
-  console.log(isActive);
   return (
     <motion.li
       variants={variants}
@@ -46,5 +45,7 @@ NavigationItem.propTypes = {
   animate: PropTypes.string,
   customDelay: PropTypes.number
 };
+
+NavigationItem.defaultProps = {};
 
 export { NavigationItem };
