@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Container } from '@/Atoms/Container';
 import Image from 'next/image';
 import me from '@/public/me.jpeg';
@@ -53,18 +54,10 @@ const About = ({ refNode }) => {
             <p>
               You can read more about my work in the{' '}
               <a
-                className="shadow-link hover:shadow-link-hover dark:shadow-link-dark dark:hover:shadow-link-dark-hover transition-shadow"
+                className="underlined relative border-b-2 border-grey-300 dark:border-grey-700 hover:border-b-0"
                 href="#skills"
               >
                 skills
-              </a>{' '}
-              and
-              <a
-                className="shadow-link hover:shadow-link-hover dark:shadow-link-dark dark:hover:shadow-link-dark-hover transition-shadow"
-                href="#projects"
-              >
-                {' '}
-                experience
               </a>{' '}
               sections.
             </p>
@@ -73,6 +66,13 @@ const About = ({ refNode }) => {
       </div>
     </Container>
   );
+};
+
+About.propTypes = {
+  refNode: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]).isRequired
 };
 
 export default About;
