@@ -21,7 +21,7 @@ const talkAbout = [
 const Hero = () => (
   <Container>
     <h1 className="headline text-3xl md:text-5xl lg:text-6xl">
-      Hey, I&apos;m Jose Palacios 👋
+      Hey, I&apos;m Jose Luis Camargo 👋
     </h1>
     <p className="my-8 text-lg">
       Welcome to my website! I am a passionate Software Developer, specialised

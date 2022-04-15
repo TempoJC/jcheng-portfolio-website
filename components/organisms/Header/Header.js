@@ -67,10 +67,10 @@ const Header = () => {
               initial={{ opacity: 0, y: -10 }}
             >
               <span className="transition duration-300 opacity-100 group-hover:opacity-0">
-                @TempoJC
+                @JCheng
               </span>
               <span className="absolute transition duration-300 left-0 opacity-0 group-hover:opacity-100 text-transparent bg-clip-text hover:bg-gradient-to-r from-light-start to-light-stop dark:from-dark-start dark:to-dark-stop">
-                Jose Camargo
+                Jose Luis Camargo
               </span>
             </motion.a>
           </Link>
