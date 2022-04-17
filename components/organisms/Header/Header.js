@@ -93,7 +93,7 @@ const Header = () => {
           </nav>
 
           <button
-            className="absolute z-50 top-8 right-4 md:hidden"
+            className="absolute z-50 top-4 right-4 md:hidden"
             onClick={() => setIsOpen(prev => !prev)}
             aria-label="Menu"
           >
@@ -105,7 +105,11 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <MobileMenu isOpen={isOpen} activeHash={activeHash} />
+      <MobileMenu
+        isOpen={isOpen}
+        activeHash={activeHash}
+        handleMenu={() => setIsOpen(!isOpen)}
+      />
     </>
   );
 };

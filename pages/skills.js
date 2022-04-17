@@ -19,8 +19,8 @@ const Skills = ({ refNode }) => {
 
   return (
     <Container ref={refNode} id={'skills'}>
-      <div className="flex flex-row">
-        <div className="w-2/5 m-auto">
+      <div className="flex flex-col md:flex-row lg:flex-row">
+        <div className="w-full md:w-2/5 lg:w-w-2/5 m-auto">
           <h1 className="headline mb-6 text-3xl md:text-5xl lg:text-4xl">
             Technologys 🥷
           </h1>
@@ -33,7 +33,7 @@ const Skills = ({ refNode }) => {
           </p>
         </div>
 
-        <div className="w-3/5">
+        <div className="w-full md:w-3/5 lg:w-w-3/5">
           <Image
             className="rounded-full"
             priority

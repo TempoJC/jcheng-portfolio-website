@@ -29,7 +29,7 @@ const IndexPage = () => {
       <About refNode={personalRef}></About>
       <Skills refNode={skillsRef}></Skills>
       {/* <Experience ref={experienceRef}></Experience> */}
-      <Projects refNode={portfolioRef}></Projects>
+      {/* <Projects refNode={portfolioRef}></Projects> */}
       <Contact refNode={contactRef}></Contact>
     </>
   );

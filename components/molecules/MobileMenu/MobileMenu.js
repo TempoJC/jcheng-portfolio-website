@@ -4,7 +4,7 @@ import { NavigationItem } from '@/Atoms/NavigationItem';
 import { navItems } from '@/Organisms/Header';
 import { ThemeToggle } from '@/Atoms/ThemeToggle';
 
-const MobileMenu = ({ activeHash, isOpen }) => {
+const MobileMenu = ({ activeHash, handleMenu, isOpen }) => {
   const navigationVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: custom => ({
@@ -29,19 +29,21 @@ const MobileMenu = ({ activeHash, isOpen }) => {
               <NavigationItem
                 animate="visible"
                 customDelay={0.5 + (index + 1) * 0.1}
+                hash={hash}
                 initial="hidden"
                 isActive={activeHash === `/#${hash}`}
                 key={`${hash}${index}`}
+                onClick={handleMenu}
                 title={title}
                 variants={navigationVariants}
               />
             ))}
             <motion.li
-              className="flex justify-center mt-12"
-              variants={navigationVariants}
-              initial="hidden"
               animate="visible"
+              className="flex justify-center mt-12"
               custom={0.5 + (navItems.length + 1) * 0.1}
+              initial="hidden"
+              variants={navigationVariants}
             >
               <ThemeToggle />
             </motion.li>
@@ -54,7 +56,8 @@ const MobileMenu = ({ activeHash, isOpen }) => {
 
 MobileMenu.propTypes = {
   activeHash: PropTypes.string.isRequired,
-  isOpen: PropTypes.bool
+  handleMenu: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired
 };
 
 export { MobileMenu };

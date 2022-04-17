@@ -10,8 +10,8 @@ const About = ({ refNode }) => {
 
   return (
     <Container ref={refNode} id={'about'}>
-      <div className="flex flex-row">
-        <div className="w-1/3 m-auto">
+      <div className="flex flex-col md:flex-row lg:flex-row">
+        <div className="w-2/3 md:w-1/3 lg:w-1/3 m-auto">
           <Image
             className="rounded-full"
             priority
@@ -21,8 +21,8 @@ const About = ({ refNode }) => {
             quality={100}
           />
         </div>
-        <div className="w-2/3">
-          <div className="ml-8">
+        <div className="w-full my-8 md:w-2/3 lg:w-2/3">
+          <div className="md:ml-8 lg:ml-8">
             <h1 className="headline mb-6 text-3xl md:text-5xl lg:text-4xl">
               About me
             </h1>
