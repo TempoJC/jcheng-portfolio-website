@@ -48,7 +48,9 @@ const Skills = ({ refNode }) => {
         {icons &&
           icons.map((icon, index) => (
             <div
-              className={`w-20 mx-10 ${icon.class ? icon.class : ''}`}
+              className={`w-10 mx-2 md:w-20 lg:w-20 md:mx-10 lg:mx-10 ${
+                icon.class ? icon.class : ''
+              }`}
               key={index}
             >
               <Image priority alt={icon.alt} src={icon.src} quality={75} />

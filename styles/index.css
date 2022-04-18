@@ -115,6 +115,10 @@ html.dark {
     }
   }
 
+  .underlined {
+    @apply underlined-light dark:underlined-dark;
+  }
+
   /* .gradient-bg-dark {
     background: var(--dark-gradient);
   }

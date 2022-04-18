@@ -10,7 +10,7 @@ import Projects from './projects';
 import Skills from './skills';
 
 const IndexPage = () => {
-  const personalRef = createRef();
+  const aboutRef = createRef();
   const skillsRef = createRef();
   const portfolioRef = createRef();
   const contactRef = createRef();
@@ -26,7 +26,7 @@ const IndexPage = () => {
         description="A Front-End Software Engineer with a focus on JavaScript and React. I have more than 7 years experience working in software engineering."
       />
       <Hero></Hero>
-      <About refNode={personalRef}></About>
+      <About refNode={aboutRef}></About>
       <Skills refNode={skillsRef}></Skills>
       {/* <Experience ref={experienceRef}></Experience> */}
       {/* <Projects refNode={portfolioRef}></Projects> */}
