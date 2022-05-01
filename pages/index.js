@@ -12,6 +12,7 @@ import Skills from './skills';
 const IndexPage = () => {
   const aboutRef = createRef();
   const skillsRef = createRef();
+  const experienceRef = createRef();
   const portfolioRef = createRef();
   const contactRef = createRef();
 
@@ -28,7 +29,7 @@ const IndexPage = () => {
       <Hero></Hero>
       <About refNode={aboutRef}></About>
       <Skills refNode={skillsRef}></Skills>
-      {/* <Experience ref={experienceRef}></Experience> */}
+      <Experience refNode={experienceRef}></Experience>
       {/* <Projects refNode={portfolioRef}></Projects> */}
       <Contact refNode={contactRef}></Contact>
     </>
